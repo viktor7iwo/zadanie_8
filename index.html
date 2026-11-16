@@ -1,0 +1,56 @@
+
+
+Index · HTML
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Обратная связь</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page">
+        <h1>Остались вопросы?</h1>
+        <p>Напишите нам, и мы ответим как можно скорее.</p>
+        <button type="button" class="btn" id="open-form">Написать нам</button>
+    </main>
+ 
+    <div class="popup" id="popup" hidden>
+        <div class="popup__panel" id="popup-panel" role="dialog" aria-modal="true" aria-labelledby="form-title" tabindex="-1">
+            <button type="button" class="popup__close" id="close-form" aria-label="Закрыть форму">&times;</button>
+            <h2 class="popup__title" id="form-title">Обратная связь</h2>
+            <form class="form" id="feedback-form">
+                <label class="field">
+                    <span class="field__label">ФИО</span>
+                    <input type="text" name="name" autocomplete="name" required>
+                </label>
+                <label class="field">
+                    <span class="field__label">Email</span>
+                    <input type="email" name="email" autocomplete="email" required>
+                </label>
+                <label class="field">
+                    <span class="field__label">Телефон</span>
+                    <input type="tel" name="phone" autocomplete="tel" inputmode="tel">
+                </label>
+                <label class="field">
+                    <span class="field__label">Организация</span>
+                    <input type="text" name="organization" autocomplete="organization">
+                </label>
+                <label class="field field--grow">
+                    <span class="field__label">Сообщение</span>
+                    <textarea name="message" rows="3" required></textarea>
+                </label>
+                <label class="agree">
+                    <input type="checkbox" name="agree" required>
+                    <span>Я согласен(на) с <a href="privacy.html" target="_blank" rel="noopener">политикой обработки персональных данных</a></span>
+                </label>
+                <p class="status" id="status" role="status" aria-live="polite"></p>
+                <button type="submit" class="btn btn--wide" id="submit-button">Отправить</button>
+            </form>
+        </div>
+    </div>
+ 
+    <script src="script.js"></script>
+</body>
+</html>
